@@ -1,7 +1,5 @@
 // add scripts
 
-console.log("sanity check!");
-
 var students = [
   {
    name: 'Derek',
@@ -30,6 +28,14 @@ var students = [
   }
 ];
 
+function firstLoop(arr) {
+  arr.forEach(function(student) {
+    console.log(student.name);
+  });
+}
+
+firstLoop(students);
+
 function secondLoop(arr){
   arr.forEach(function(student){
     console.log(student.age);
@@ -40,7 +46,7 @@ secondLoop(students);
 
 function thirdLoop(arr){
   arr.forEach(function(student){
-    console.log(student.name + ', ' +student.city);
+    console.log(student.name + ', ' + student.city);
   });
 }
 
@@ -48,6 +54,20 @@ thirdLoop(students);
 
 function fourthLoop(arr){
   arr.forEach(function(student){
-
+    if (student.city === 'Boulder'){
+      console.log(student.name + ' is from ' + student.city);
+    }
   });
 }
+
+fourthLoop(students);
+
+function fifthLoop(arr){
+  arr.forEach(function(student){
+    if (student.age > 25){
+      console.log(student.name + ' is older than 25');
+    }
+  });
+}
+
+fifthLoop(students);
